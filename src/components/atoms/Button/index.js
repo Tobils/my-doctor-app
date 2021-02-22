@@ -1,11 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 export default function Button({type, title}) {
   return (
-    <View style={styles.container(type)}>
+    <TouchableOpacity style={styles.container(type)}>
       <Text style={styles.text(type)}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   }),
   text: (type) => ({
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: 'Nunito-SemiBold',
     textAlign: 'center',
     color: type === 'secondary' ? '#112340' : 'white',
   }),
