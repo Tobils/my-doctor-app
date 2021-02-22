@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
   page: {
     padding: 40,
     flex: 1,
-    justifyContent: 'space-between',
   },
   title: {
     fontSize: 20,
