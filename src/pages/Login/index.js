@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {ILLogo} from '../../assets';
 import {Button, Gap, Input, Link} from '../../components/atoms';
 
-export default function index() {
+export default function index({navigation}) {
   return (
     <View style={styles.page}>
       <ILLogo />
@@ -16,7 +16,12 @@ export default function index() {
       <Gap height={40} />
       <Button title="Sign In" />
       <Gap height={30} />
-      <Link label="Create New Account" size={16} align="center" />
+      <Link
+        label="Create New Account"
+        size={16}
+        align="center"
+        onPress={() => navigation.navigate('Register')}
+      />
     </View>
   );
 }

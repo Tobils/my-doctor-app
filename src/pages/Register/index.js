@@ -1,35 +1,40 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {ILLogo} from '../../assets';
-import {Button, Gap, Input, Link} from '../../components/atoms';
+import {StyleSheet, View} from 'react-native';
+import {Header} from '../../components';
+import {Button, Gap, Input} from '../../components/atoms';
+import {colors} from '../../utils/colors';
 
-export default function index() {
+export default function index({navigation}) {
   return (
     <View style={styles.page}>
-      <Text style={styles.title}>Daftar Akun</Text>
-      <Input label="Full Name" />
-      <Gap height={24} />
-      <Input label="Pekerjaan" />
-      <Gap height={24} />
-      <Input label="Email Address" />
-      <Gap height={24} />
-      <Input label="Password" />
-      <Gap height={40} />
-      <Button title="Continue" />
-      <Gap height={30} />
+      <Header title="Daftar Akun" onPress={() => navigation.goBack()} />
+      <View style={styles.content}>
+        <Input label="Full Name" />
+        <Gap height={24} />
+        <Input label="Pekerjaan" />
+        <Gap height={24} />
+        <Input label="Email Address" />
+        <Gap height={24} />
+        <Input label="Password" />
+        <Gap height={40} />
+        <Button title="Continue" />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   page: {
-    padding: 40,
+    backgroundColor: colors.white,
     flex: 1,
+  },
+  content: {
+    paddingHorizontal: 40,
   },
   title: {
     fontSize: 20,
     fontFamily: 'Nunito-SemiBold',
-    color: '#112340',
+    color: colors.text.primary,
     marginTop: 40,
     marginBottom: 40,
     textAlign: 'center',
