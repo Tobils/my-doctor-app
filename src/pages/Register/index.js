@@ -1,14 +1,15 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, ScrollView} from 'react-native';
 import {Header} from '../../components';
 import {Button, Gap, Input} from '../../components/atoms';
+import {fonts} from '../../utils';
 import {colors} from '../../utils/colors';
 
 export default function index({navigation}) {
   return (
     <View style={styles.page}>
       <Header title="Daftar Akun" onPress={() => navigation.goBack()} />
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Input label="Full Name" />
         <Gap height={24} />
         <Input label="Pekerjaan" />
@@ -18,7 +19,7 @@ export default function index({navigation}) {
         <Input label="Password" />
         <Gap height={40} />
         <Button title="Continue" />
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'Nunito-SemiBold',
+    fontFamily: fonts.primary[600],
     color: colors.text.primary,
     marginTop: 40,
     marginBottom: 40,

@@ -1,5 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {fonts} from '../../../utils';
+import {colors} from '../../../utils/colors';
 
 export default function index({label, size, align, onPress}) {
   return (
@@ -12,8 +14,8 @@ export default function index({label, size, align, onPress}) {
 const styles = StyleSheet.create({
   link: (size, align) => ({
     fontSize: size,
-    color: '#7D8797',
-    fontFamily: 'Nunito-Regular',
+    color: colors.text.secondary,
+    fontFamily: fonts.primary[400],
     textDecorationLine: 'underline',
     textAlign: align,
   }),

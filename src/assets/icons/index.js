@@ -1,3 +1,3 @@
-import IconBack from './arrow_back_24px_outlined.svg';
+import IconBackDark from './arrow_back_24px_outlined.svg';
 
-export {IconBack};
+export {IconBackDark};

@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {ILLogo} from '../../assets';
+import {fonts} from '../../utils';
+import {colors} from '../../utils/colors';
 
 export default function index({navigation}) {
   useEffect(() => {
@@ -23,9 +25,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontFamily: 'Nunito-SemiBold',
+    fontFamily: fonts.primary[600],
     fontSize: 20,
     marginTop: 20,
-    color: '#112340',
+    color: colors.text.primary,
   },
 });

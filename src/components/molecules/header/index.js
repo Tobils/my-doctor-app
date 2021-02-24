@@ -1,16 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import {IconBack} from '../../../assets';
+import {fonts} from '../../../utils';
 import {colors} from '../../../utils/colors';
-import {Gap} from '../../atoms';
+import {Button, Gap} from '../../atoms';
 
 export default function index({title, onPress}) {
   return (
     <View style={styles.wrapper}>
-      <TouchableOpacity onPress={onPress}>
-        <IconBack />
-      </TouchableOpacity>
+      <Button type="icon-only" icon="back-dark" onPress={onPress} />
       <Text style={styles.title}>{title}</Text>
       <Gap width={24} />
     </View>
@@ -28,7 +25,7 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     textAlign: 'center',
-    fontFamily: 'Nunito-SemiBold',
+    fontFamily: fonts.primary[600],
     fontSize: 20,
     color: colors.text.primary,
   },

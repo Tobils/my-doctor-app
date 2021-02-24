@@ -2,6 +2,8 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {ILLogo} from '../../assets';
 import {Button, Gap, Input, Link} from '../../components/atoms';
+import {fonts} from '../../utils';
+import {colors} from '../../utils/colors';
 
 export default function index({navigation}) {
   return (
@@ -30,11 +32,12 @@ const styles = StyleSheet.create({
   page: {
     padding: 40,
     flex: 1,
+    backgroundColor: colors.white,
   },
   title: {
     fontSize: 20,
-    fontFamily: 'Nunito-SemiBold',
-    color: '#112340',
+    fontFamily: fonts.primary[600],
+    color: colors.text.primary,
     marginTop: 40,
     marginBottom: 40,
     maxWidth: 183,
