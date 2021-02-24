@@ -16,7 +16,7 @@ export default function index({navigation}) {
       <Gap height={10} />
       <Link label="Forgot My Password" size={12} />
       <Gap height={40} />
-      <Button title="Sign In" />
+      <Button title="Sign In" onPress={() => navigation.replace('MainApp')} />
       <Gap height={30} />
       <Link
         label="Create New Account"

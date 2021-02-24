@@ -14,6 +14,9 @@ npm install react-native-reanimated react-native-gesture-handler react-native-sc
 
 # stack navigation
 npm install @react-navigation/stack
+
+# tab navigation
+npm install @react-navigation/bottom-tabs
 ```
 
 ## Add Custom fonts
