@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import {IconAddPhoto, ILNullPhoto} from '../../assets';
 import {Button, Gap, Header, Link} from '../../components';
-import {colors} from '../../utils';
+import {colors, fonts} from '../../utils';
 
 export default function index({navigation}) {
   return (
@@ -19,8 +19,8 @@ export default function index({navigation}) {
             <Image source={ILNullPhoto} style={styles.avatar} />
             <IconAddPhoto style={styles.addPhoto} />
           </View>
-          <Text>Ade Suhada</Text>
-          <Text>Software Engineer</Text>
+          <Text style={styles.name}>Ade Suhada</Text>
+          <Text style={styles.profesion}>Software Engineer</Text>
         </View>
         <View>
           <Button title="Upload And Continue" />
@@ -37,8 +37,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
-  name: {},
-  profesion: {},
+  name: {
+    fontFamily: fonts.primary[600],
+    color: colors.text.primary,
+    fontSize: 32,
+    marginTop: 26,
+  },
+  profesion: {
+    fontFamily: fonts.primary[400],
+    fontSize: 18,
+    color: colors.text.secondary,
+  },
   profile: {
     justifyContent: 'center',
     alignItems: 'center',
