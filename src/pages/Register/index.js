@@ -8,7 +8,12 @@ import {colors} from '../../utils/colors';
 export default function index({navigation}) {
   return (
     <View style={styles.page}>
-      <Header title="Daftar Akun" onPress={() => navigation.goBack()} />
+      <Header
+        title="Daftar Akun"
+        onPress={() => navigation.goBack()}
+        type="icon-only"
+        icon="back-dark"
+      />
       <ScrollView style={styles.content}>
         <Input label="Full Name" />
         <Gap height={24} />
@@ -18,7 +23,10 @@ export default function index({navigation}) {
         <Gap height={24} />
         <Input label="Password" />
         <Gap height={40} />
-        <Button title="Continue" />
+        <Button
+          title="Continue"
+          onPress={() => navigation.navigate('UploadPhoto')}
+        />
       </ScrollView>
     </View>
   );

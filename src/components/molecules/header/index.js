@@ -4,10 +4,10 @@ import {fonts} from '../../../utils';
 import {colors} from '../../../utils/colors';
 import {Button, Gap} from '../../atoms';
 
-export default function index({title, onPress}) {
+export default function index({title, onPress, icon, type}) {
   return (
     <View style={styles.wrapper}>
-      <Button type="icon-only" icon="back-dark" onPress={onPress} />
+      <Button type={type} icon={icon} onPress={onPress} />
       <Text style={styles.title}>{title}</Text>
       <Gap width={24} />
     </View>
